@@ -14,9 +14,9 @@ def parseGPX(filename):
                 x = np.append(x, float(line[3]))
                 y = np.append(y, float(line[1]))
                 
-                # Transform coordinates (take earth curvature into account)
-                coord_transf = pyproj.Transformer.from_crs(4326, 3857)    
-                x, y = coord_transf.transform(y, x)
+    # Transform coordinates (take earth curvature into account)
+    coord_transf = pyproj.Transformer.from_crs(4326, 3857)    
+    x, y = coord_transf.transform(y, x)
 
     return x, y
 

@@ -57,6 +57,21 @@ ax.spines['top'].set_visible(False)
 ax.spines['right'].set_visible(False)
 ax.spines['bottom'].set_visible(False)
 ax.spines['left'].set_visible(False)
+
+# Fix axis limits
+xlm = ax.get_xlim()
+ylm = ax.get_ylim()
+xdiff = xlm[1] - xlm[0]
+ydiff = ylm[1] - ylm[0]
+xymax = max([xdiff, ydiff])
+if xdiff > ydiff:
+    newylims = [-xymax/2, xymax/2] + (ylm[0]+ylm[1])/2
+    ax.set_ylim(newylims)
+else:
+    newxlims = [-xymax/2, xymax/2] + (xlm[0]+ylm[1])/2
+    ax.set_xlim(newxlims)
+
+# Save plot
 plt.savefig('Heatmap_bow.png')
 
 #%% Plot data - normal plot (white on black), alpha < 1
@@ -74,6 +89,21 @@ ax.spines['top'].set_visible(False)
 ax.spines['right'].set_visible(False)
 ax.spines['bottom'].set_visible(False)
 ax.spines['left'].set_visible(False)
+
+# Fix axis limits
+xlm = ax.get_xlim()
+ylm = ax.get_ylim()
+xdiff = xlm[1] - xlm[0]
+ydiff = ylm[1] - ylm[0]
+xymax = max([xdiff, ydiff])
+if xdiff > ydiff:
+    newylims = [-xymax/2, xymax/2] + (ylm[0]+ylm[1])/2
+    ax.set_ylim(newylims)
+else:
+    newxlims = [-xymax/2, xymax/2] + (xlm[0]+ylm[1])/2
+    ax.set_xlim(newxlims)
+
+# Save plot
 plt.savefig('Heatmap_wob.png', facecolor='black')
 
 #%% Plot data - normal plot (white on black), alpha < 1, fine line for HD
@@ -91,4 +121,19 @@ ax.spines['top'].set_visible(False)
 ax.spines['right'].set_visible(False)
 ax.spines['bottom'].set_visible(False)
 ax.spines['left'].set_visible(False)
+
+# Fix axis limits
+xlm = ax.get_xlim()
+ylm = ax.get_ylim()
+xdiff = xlm[1] - xlm[0]
+ydiff = ylm[1] - ylm[0]
+xymax = max([xdiff, ydiff])
+if xdiff > ydiff:
+    newylims = [-xymax/2, xymax/2] + (ylm[0]+ylm[1])/2
+    ax.set_ylim(newylims)
+else:
+    newxlims = [-xymax/2, xymax/2] + (xlm[0]+ylm[1])/2
+    ax.set_xlim(newxlims)
+
+# Save plot
 plt.savefig('Heatmap_wobHD.pdf', facecolor='black')

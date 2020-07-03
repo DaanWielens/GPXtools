@@ -68,7 +68,7 @@ if xdiff > ydiff:
     newylims = [-xymax/2, xymax/2] + (ylm[0]+ylm[1])/2
     ax.set_ylim(newylims)
 else:
-    newxlims = [-xymax/2, xymax/2] + (xlm[0]+ylm[1])/2
+    newxlims = [-xymax/2, xymax/2] + (xlm[0]+xlm[1])/2
     ax.set_xlim(newxlims)
 
 # Save plot
@@ -100,7 +100,7 @@ if xdiff > ydiff:
     newylims = [-xymax/2, xymax/2] + (ylm[0]+ylm[1])/2
     ax.set_ylim(newylims)
 else:
-    newxlims = [-xymax/2, xymax/2] + (xlm[0]+ylm[1])/2
+    newxlims = [-xymax/2, xymax/2] + (xlm[0]+xlm[1])/2
     ax.set_xlim(newxlims)
 
 # Save plot
@@ -132,7 +132,7 @@ if xdiff > ydiff:
     newylims = [-xymax/2, xymax/2] + (ylm[0]+ylm[1])/2
     ax.set_ylim(newylims)
 else:
-    newxlims = [-xymax/2, xymax/2] + (xlm[0]+ylm[1])/2
+    newxlims = [-xymax/2, xymax/2] + (xlm[0]+xlm[1])/2
     ax.set_xlim(newxlims)
 
 # Save plot
